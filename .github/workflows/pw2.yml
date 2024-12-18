@@ -8,12 +8,14 @@
 name: Make PassWall2 run files
 
 on:
+  schedule:
+    - cron: '0 */6 * * *'
   workflow_dispatch:
     inputs:
       package_version:
         description: '这里是包版本'
         required: false
-        default: 'packages-24.10'  
+        default: 'packages-24.10'
 
 jobs:
   build:
